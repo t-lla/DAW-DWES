@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formulario</title>
+    <link rel="stylesheet" href="ej_form.css">
+</head>
+<body>
+    <form id="form" action="ej_form.php" method="POST"> <!--llamando al php con action al inicio del formulario-->
+        <h2>Ejercicio Formulario</h2>
+        <label for="nombre">Nombre completo*:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre Apellidos" required>
+        <span class="error" id="errorNombre"></span>
+
+        <label for="email">Correo electrónico*:</label>
+        <input type="email" id="email" name="email" placeholder="nombre@mail.com" required>
+        <span class="error" id="errorEmail"></span>
+
+        <label for="tlf">Teléfono:</label>
+        <input type="text" id="tlf" name="tlf" placeholder="123456789">
+        <span class="error" id="errorTlf"></span>
+
+        <label for="fecha">Fecha de nacimiento*:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <span class="error" id="errorFecha"></span>
+
+        <label>Género:</label>
+            <input type="radio" id="m" name="genero" value="m">
+            <label for="m">Masculino</label>
+            <input type="radio" id="f" name="genero" value="f">
+            <label for="f">Femenino</label>
+            <input type="radio" id="other" name="genero" value="other">
+            <label for="other">Otro</label>
+        </label>
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+            <option value="uno">Selecciona un país:</option>
+            <option value="dos">País 1</option>
+            <option value="tres">País 2</option>
+            <option value="cuatro">País 3</option>
+            <option value="cinco">País 4</option>
+        </select>
+
+        <label for="checkbox">
+            <input type="checkbox" id="checkbox" required>
+            Términos y condiciones*
+        </label>
+        <span class="error" id="errorCheckbox"></span>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+    <script src="ej_form.js"></script>
+</body>
+</html>
